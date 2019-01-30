@@ -1,6 +1,6 @@
 # README
 
-The task is to write an action that stores some data in the sqlite database and returns json. 
+The task is to write an action that stores some data in the sqlite database and another action that returns a set of data from the database. The response type should be JSON.
 
 ### The POST request 
 

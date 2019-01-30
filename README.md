@@ -1,14 +1,19 @@
 # README
 
-The task is to write an action that stores some data in the sqlite database and another action that returns a set of data from the database. The response type should be JSON.
+## Mission #1
 
-### The POST request 
+Write an API call that returns the n-th value of the fibonacci series.
 
-The requests purpose is to calculate the n-th value of the fibonacci series and should look like this:
+### The request
 
 `POST /fibonacci.json`
 
-with the required integer parameter `n`. If the paramter is missing the response should have status code 400 with an appropriate error message. 
+Parameter:
+* `n`: [integer] n-th value of the fibonacci series
+
+If the paramter is missing the response should have status code 400 with an appropriate error message. 
+
+### The response
 
 The successful response should be JSON in the following structure:
 
@@ -20,20 +25,32 @@ The successful response should be JSON in the following structure:
 }
 ```
 
-`result` should be the `n`-th value of the fibonacci series and `runtime` should be the time in milliseconds it took to compute the result.
+* `value`: the value of the parameter n
+* `result`: the n-th value of the fibonacci series
+* `runtime`: time in milliseconds it took to compute the result
 
-Each request should save the following information about the request to the database:
+## Mission #2
 
-* `value` of the paramter `n` 
-* `result`
-* `runtime`
-* `created_at`
+Save the computation results on each request to the database.
 
-### The GET request 
+The data that should be stored:
 
-The purpose of this request is to list the last 10 computations stored in the database via the `POST` request.
+* `value`: value of the paramter `n` 
+* `result`: the n-th value of the fibonacci series
+* `runtime`: time in milliseconds it took to compute the result
+* `created_at`: creation datetime of the record
+
+## Mission #3
+
+Write an API call that returns the last 10 computation results from the database in JSON format.
+
+### The request
 
 `GET /fibonacci.json`
+
+Parameters: none
+
+### The response
 
 The successful response should be JSON in the following structure:
 
@@ -54,11 +71,13 @@ The successful response should be JSON in the following structure:
 ]
 ```
 
-The main purpose of this task is to see that you know the rails stack and get a glimpse of your coding style.
+The main purpose of these tasks is to see that you know the rails stack and get a glimpse of your coding style.
 
 ### Hints
 
+* tackle each mission one after another
+* commit at least after each mission is completed
 * use libraries whenever they fit
-* write specs
+* write specs!
 * keep it simple and focus on the task
 * don't forget the edge cases

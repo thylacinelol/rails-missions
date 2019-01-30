@@ -1,5 +1,7 @@
 # README
 
+Please fork this project into your personal account and commit your changes on the fork. Give us the URL of your fork, so we can review your work. Thank you!
+
 ## Mission #1
 
 Write an API call that returns the n-th value of the fibonacci series.

@@ -12,10 +12,11 @@ with the required integer parameter `n`. If the paramter is missing the response
 
 The successful response should be JSON in the following structure:
 
-```
+```json
 {
+  "value": 3,
   "result": 5,
-  "runtime": 367
+  "runtime": 67
 }
 ```
 
@@ -36,18 +37,21 @@ The purpose of this request is to list the last 10 computations stored in the da
 
 The successful response should be JSON in the following structure:
 
-```
-[{
-  "value": 3,
-  "result": 5,
-  "runtime": 67,
-  "created_at": "2019-01-30T12:45:56Z"
-},{
-  "value": 10,
-  "result": 55,
-  "runtime": 187,
-  "created_at": "2019-01-30T12:43:34Z"
-}]
+```json
+[
+  {
+    "value": 3,
+    "result": 5,
+    "runtime": 67,
+    "created_at": "2019-01-30T12:45:56Z"
+  },
+  {
+    "value": 10,
+    "result": 55,
+    "runtime": 187,
+    "created_at": "2019-01-30T12:43:34Z"
+  }
+]
 ```
 
 The main purpose of this task is to see that you know the rails stack and get a glimpse of your coding style.

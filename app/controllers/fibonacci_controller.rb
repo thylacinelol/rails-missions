@@ -1,6 +1,21 @@
 class FibonacciController < ApplicationController
   skip_before_action :verify_authenticity_token
 
+  def index
+    results = Fibonacci.order(created_at: :desc).first(10)
+
+    json = Jbuilder.new do |json|
+      json.array!(results) do |result|
+        json.value(result.value)
+        json.result(result.result.to_i)
+        json.runtime(result.runtime)
+        json.created_at(result.created_at)
+      end
+    end
+
+    render(json: json.target!)
+  end
+
   def create
     fibonacci_contract = FibonacciContract.new.call(n: params[:n])
     if fibonacci_contract.failure?

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_20_175958) do
+ActiveRecord::Schema.define(version: 2022_10_20_190740) do
 
   create_table "fibonaccis", force: :cascade do |t|
     t.integer "value", limit: 8, null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_10_20_175958) do
     t.float "runtime", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_fibonaccis_on_created_at"
   end
 
 end

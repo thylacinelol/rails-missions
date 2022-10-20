@@ -45,6 +45,9 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'rubocop-shopify', require: false
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'timecop'
 end
 
 group :development do

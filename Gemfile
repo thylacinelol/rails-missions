@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'rubocop', require: false
   gem 'rubocop-shopify', require: false
+  gem 'shoulda-matchers'
 end
 
 group :development do
